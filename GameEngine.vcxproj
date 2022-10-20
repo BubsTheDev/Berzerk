@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD97AC8C-DD09-42F6-8636-37D2AF5A3721}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameEngine</RootNamespace>
+    <ProjectName>Berzerk</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2_ttf-2.0.14\include;D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2-2.0.5\lib\x86;D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2_ttf-2.0.14\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_ttf.lib;SDL2main.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2_ttf-2.0.14\include;D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2-2.0.5\lib\x86;D:\Andrea\_Studium\Game Engine Architecture\dev\SDL2_ttf-2.0.14\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_ttf.lib;SDL2main.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Avancezlib.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="components\PlayerBehaviourComponent.cpp" />
+    <ClCompile Include="components\BulletBehaviourComponent.cpp" />
+    <ClCompile Include="components\RobotBehaviourComponent.cpp" />
+    <ClCompile Include="components\RobotSpawnBehaviourComponent.cpp" />
+    <ClCompile Include="components\RoomBehaviourComponent.cpp" />
+    <ClCompile Include="components\SentryBehaviourComponent.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="objects\Bullet.cpp" />
+    <ClCompile Include="objects\Particle.cpp" />
+    <ClCompile Include="objects\ParticlePool.cpp" />
+    <ClCompile Include="objects\Player.cpp" />
+    <ClCompile Include="objects\Robot.cpp" />
+    <ClCompile Include="objects\RobotSpawn.cpp" />
+    <ClCompile Include="objects\Room.cpp" />
+    <ClCompile Include="objects\Sentry.cpp" />
+    <ClCompile Include="objects\Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Avancezlib.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="components\BulletBehaviourComponent.h" />
+    <ClInclude Include="components\RobotBehaviourComponent.h" />
+    <ClInclude Include="components\RobotSpawnBehaviourComponent.h" />
+    <ClInclude Include="components\RoomBehaviourComponent.h" />
+    <ClInclude Include="components\SentryBehaviourComponent.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="components\PlayerBehaviourComponent.h" />
+    <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="objects\Bullet.h" />
+    <ClInclude Include="objects\Particle.h" />
+    <ClInclude Include="objects\ParticlePool.h" />
+    <ClInclude Include="objects\Player.h" />
+    <ClInclude Include="objects\Robot.h" />
+    <ClInclude Include="objects\RobotSpawn.h" />
+    <ClInclude Include="objects\Room.h" />
+    <ClInclude Include="objects\Sentry.h" />
+    <ClInclude Include="objects\Wall.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
